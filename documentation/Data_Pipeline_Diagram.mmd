@@ -1,0 +1,52 @@
+graph TD
+    subgraph Sources ["1. Ingestion Sources"]
+        A1[Mobile App SDK - Android/iOS]
+        A2[Web App Telemetry]
+        A3[Partner Offerwall Webhooks]
+        A4[Payment Gateway Callbacks]
+    end
+
+    subgraph Streaming ["2. Ingestion & Streaming Layer"]
+        B1[API Gateway - FastAPI]
+        B2[Kafka / AWS Kinesis Event Bus]
+        B3[Dead Letter Queue - DLQ]
+    end
+
+    subgraph Medallion ["3. Lakehouse Medallion Architecture"]
+        C1[(Bronze Layer - Raw Parquet)]
+        C2[(Silver Layer - Cleaned & Deduplicated Tables)]
+        C3[(Gold Layer - Star-Schema Analytics Warehouse)]
+    end
+
+    subgraph Orchestration ["4. Orchestration & Quality Gate"]
+        D1[Airflow / Prefect Workflow Scheduler]
+        D2[dbt Transformations & Data Quality Tests]
+        D3[Pytest Continuous Quality Engine]
+    end
+
+    subgraph Consumers ["5. Consumption Surfaces"]
+        E1[Power BI Executive & Operational Dashboards]
+        E2[SQL Analytical Views - Analyst Ad-hoc]
+        E3[Risk & Anti-Fraud Automated Alerting]
+    end
+
+    A1 -->|REST / JSON| B1
+    A2 -->|REST / JSON| B1
+    A3 -->|Signed Webhook| B1
+    A4 -->|Payment Callback| B1
+
+    B1 -->|Validated Stream| B2
+    B1 -.->|Schema Failure| B3
+    B2 -->|Batch Sink| C1
+
+    C1 -->|dbt Bronze-to-Silver ETL| C2
+    C2 -->|dbt Star-Schema Aggregation| C3
+
+    D1 --> D2
+    D2 --> C2
+    D2 --> C3
+    D3 --> C2
+
+    C3 --> E1
+    C3 --> E2
+    C3 --> E3

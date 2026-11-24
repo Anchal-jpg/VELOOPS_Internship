@@ -1,0 +1,461 @@
+{
+  "config": "{\"version\": \"5.50\", \"themeCollection\": {\"baseTheme\": {\"name\": \"Corporate Navy & Teal\", \"version\": \"1.0\", \"type\": 2}}}",
+  "layoutOptimization": 0,
+  "sections": [
+    {
+      "name": "Page1",
+      "displayName": "1. Executive Overview",
+      "ordinal": 0,
+      "width": 1280,
+      "height": 720,
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 20,
+          "z": 1000,
+          "width": 1240,
+          "height": 60,
+          "config": "{\"name\": \"Header_Page1\", \"title\": \"VELOP Rewards \\u2014 1. Executive Overview\", \"type\": \"textbox\"}"
+        },
+        {
+          "x": 20,
+          "y": 90,
+          "z": 1001,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card1_Page1\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 320,
+          "y": 90,
+          "z": 1002,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card2_Page1\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 620,
+          "y": 90,
+          "z": 1003,
+          "width": 300,
+          "height": 130,
+          "config": "{\"name\": \"Card3_Page1\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 940,
+          "y": 90,
+          "z": 1004,
+          "width": 320,
+          "height": 130,
+          "config": "{\"name\": \"Card4_Page1\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 20,
+          "y": 230,
+          "z": 1005,
+          "width": 780,
+          "height": 460,
+          "config": "{\"name\": \"MainChart_Page1\", \"type\": \"lineClusteredColumnComboChart\"}"
+        },
+        {
+          "x": 820,
+          "y": 230,
+          "z": 1006,
+          "width": 440,
+          "height": 460,
+          "config": "{\"name\": \"SideBreakdown_Page1\", \"type\": \"pieChart\"}"
+        }
+      ]
+    },
+    {
+      "name": "Page2",
+      "displayName": "2. User Analytics",
+      "ordinal": 1,
+      "width": 1280,
+      "height": 720,
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 20,
+          "z": 1000,
+          "width": 1240,
+          "height": 60,
+          "config": "{\"name\": \"Header_Page2\", \"title\": \"VELOP Rewards \\u2014 2. User Analytics\", \"type\": \"textbox\"}"
+        },
+        {
+          "x": 20,
+          "y": 90,
+          "z": 1001,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card1_Page2\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 320,
+          "y": 90,
+          "z": 1002,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card2_Page2\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 620,
+          "y": 90,
+          "z": 1003,
+          "width": 300,
+          "height": 130,
+          "config": "{\"name\": \"Card3_Page2\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 940,
+          "y": 90,
+          "z": 1004,
+          "width": 320,
+          "height": 130,
+          "config": "{\"name\": \"Card4_Page2\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 20,
+          "y": 230,
+          "z": 1005,
+          "width": 780,
+          "height": 460,
+          "config": "{\"name\": \"MainChart_Page2\", \"type\": \"lineClusteredColumnComboChart\"}"
+        },
+        {
+          "x": 820,
+          "y": 230,
+          "z": 1006,
+          "width": 440,
+          "height": 460,
+          "config": "{\"name\": \"SideBreakdown_Page2\", \"type\": \"pieChart\"}"
+        }
+      ]
+    },
+    {
+      "name": "Page3",
+      "displayName": "3. Engagement Analytics",
+      "ordinal": 2,
+      "width": 1280,
+      "height": 720,
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 20,
+          "z": 1000,
+          "width": 1240,
+          "height": 60,
+          "config": "{\"name\": \"Header_Page3\", \"title\": \"VELOP Rewards \\u2014 3. Engagement Analytics\", \"type\": \"textbox\"}"
+        },
+        {
+          "x": 20,
+          "y": 90,
+          "z": 1001,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card1_Page3\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 320,
+          "y": 90,
+          "z": 1002,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card2_Page3\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 620,
+          "y": 90,
+          "z": 1003,
+          "width": 300,
+          "height": 130,
+          "config": "{\"name\": \"Card3_Page3\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 940,
+          "y": 90,
+          "z": 1004,
+          "width": 320,
+          "height": 130,
+          "config": "{\"name\": \"Card4_Page3\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 20,
+          "y": 230,
+          "z": 1005,
+          "width": 780,
+          "height": 460,
+          "config": "{\"name\": \"MainChart_Page3\", \"type\": \"lineClusteredColumnComboChart\"}"
+        },
+        {
+          "x": 820,
+          "y": 230,
+          "z": 1006,
+          "width": 440,
+          "height": 460,
+          "config": "{\"name\": \"SideBreakdown_Page3\", \"type\": \"pieChart\"}"
+        }
+      ]
+    },
+    {
+      "name": "Page4",
+      "displayName": "4. Earning & Reward Analytics",
+      "ordinal": 3,
+      "width": 1280,
+      "height": 720,
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 20,
+          "z": 1000,
+          "width": 1240,
+          "height": 60,
+          "config": "{\"name\": \"Header_Page4\", \"title\": \"VELOP Rewards \\u2014 4. Earning & Reward Analytics\", \"type\": \"textbox\"}"
+        },
+        {
+          "x": 20,
+          "y": 90,
+          "z": 1001,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card1_Page4\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 320,
+          "y": 90,
+          "z": 1002,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card2_Page4\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 620,
+          "y": 90,
+          "z": 1003,
+          "width": 300,
+          "height": 130,
+          "config": "{\"name\": \"Card3_Page4\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 940,
+          "y": 90,
+          "z": 1004,
+          "width": 320,
+          "height": 130,
+          "config": "{\"name\": \"Card4_Page4\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 20,
+          "y": 230,
+          "z": 1005,
+          "width": 780,
+          "height": 460,
+          "config": "{\"name\": \"MainChart_Page4\", \"type\": \"lineClusteredColumnComboChart\"}"
+        },
+        {
+          "x": 820,
+          "y": 230,
+          "z": 1006,
+          "width": 440,
+          "height": 460,
+          "config": "{\"name\": \"SideBreakdown_Page4\", \"type\": \"pieChart\"}"
+        }
+      ]
+    },
+    {
+      "name": "Page5",
+      "displayName": "5. Wallet Analytics",
+      "ordinal": 4,
+      "width": 1280,
+      "height": 720,
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 20,
+          "z": 1000,
+          "width": 1240,
+          "height": 60,
+          "config": "{\"name\": \"Header_Page5\", \"title\": \"VELOP Rewards \\u2014 5. Wallet Analytics\", \"type\": \"textbox\"}"
+        },
+        {
+          "x": 20,
+          "y": 90,
+          "z": 1001,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card1_Page5\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 320,
+          "y": 90,
+          "z": 1002,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card2_Page5\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 620,
+          "y": 90,
+          "z": 1003,
+          "width": 300,
+          "height": 130,
+          "config": "{\"name\": \"Card3_Page5\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 940,
+          "y": 90,
+          "z": 1004,
+          "width": 320,
+          "height": 130,
+          "config": "{\"name\": \"Card4_Page5\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 20,
+          "y": 230,
+          "z": 1005,
+          "width": 780,
+          "height": 460,
+          "config": "{\"name\": \"MainChart_Page5\", \"type\": \"lineClusteredColumnComboChart\"}"
+        },
+        {
+          "x": 820,
+          "y": 230,
+          "z": 1006,
+          "width": 440,
+          "height": 460,
+          "config": "{\"name\": \"SideBreakdown_Page5\", \"type\": \"pieChart\"}"
+        }
+      ]
+    },
+    {
+      "name": "Page6",
+      "displayName": "6. Withdrawal Analytics",
+      "ordinal": 5,
+      "width": 1280,
+      "height": 720,
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 20,
+          "z": 1000,
+          "width": 1240,
+          "height": 60,
+          "config": "{\"name\": \"Header_Page6\", \"title\": \"VELOP Rewards \\u2014 6. Withdrawal Analytics\", \"type\": \"textbox\"}"
+        },
+        {
+          "x": 20,
+          "y": 90,
+          "z": 1001,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card1_Page6\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 320,
+          "y": 90,
+          "z": 1002,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card2_Page6\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 620,
+          "y": 90,
+          "z": 1003,
+          "width": 300,
+          "height": 130,
+          "config": "{\"name\": \"Card3_Page6\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 940,
+          "y": 90,
+          "z": 1004,
+          "width": 320,
+          "height": 130,
+          "config": "{\"name\": \"Card4_Page6\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 20,
+          "y": 230,
+          "z": 1005,
+          "width": 780,
+          "height": 460,
+          "config": "{\"name\": \"MainChart_Page6\", \"type\": \"lineClusteredColumnComboChart\"}"
+        },
+        {
+          "x": 820,
+          "y": 230,
+          "z": 1006,
+          "width": 440,
+          "height": 460,
+          "config": "{\"name\": \"SideBreakdown_Page6\", \"type\": \"pieChart\"}"
+        }
+      ]
+    },
+    {
+      "name": "Page7",
+      "displayName": "7. Referral Analytics",
+      "ordinal": 6,
+      "width": 1280,
+      "height": 720,
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 20,
+          "z": 1000,
+          "width": 1240,
+          "height": 60,
+          "config": "{\"name\": \"Header_Page7\", \"title\": \"VELOP Rewards \\u2014 7. Referral Analytics\", \"type\": \"textbox\"}"
+        },
+        {
+          "x": 20,
+          "y": 90,
+          "z": 1001,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card1_Page7\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 320,
+          "y": 90,
+          "z": 1002,
+          "width": 280,
+          "height": 130,
+          "config": "{\"name\": \"Card2_Page7\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 620,
+          "y": 90,
+          "z": 1003,
+          "width": 300,
+          "height": 130,
+          "config": "{\"name\": \"Card3_Page7\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 940,
+          "y": 90,
+          "z": 1004,
+          "width": 320,
+          "height": 130,
+          "config": "{\"name\": \"Card4_Page7\", \"type\": \"cardVisual\"}"
+        },
+        {
+          "x": 20,
+          "y": 230,
+          "z": 1005,
+          "width": 780,
+          "height": 460,
+          "config": "{\"name\": \"MainChart_Page7\", \"type\": \"lineClusteredColumnComboChart\"}"
+        },
+        {
+          "x": 820,
+          "y": 230,
+          "z": 1006,
+          "width": 440,
+          "height": 460,
+          "config": "{\"name\": \"SideBreakdown_Page7\", \"type\": \"pieChart\"}"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+erDiagram
+    USERS ||--o{ SESSIONS : "1:N (initiates)"
+    USERS ||--o{ FEATURE_EVENTS : "1:N (emits)"
+    USERS ||--o{ DAILY_ACTIVITY : "1:N (accumulates)"
+    USERS ||--o{ TASK_ACTIVITY : "1:N (executes)"
+    USERS ||--o{ MILESTONES : "1:N (unlocks)"
+    USERS ||--o{ REWARDS_LEDGER : "1:N (earns)"
+    USERS ||--o{ WALLET_TRANSACTIONS : "1:N (transacts)"
+    USERS ||--o{ WITHDRAWAL_REQUESTS : "1:N (requests)"
+    USERS ||--o{ REFERRAL_RELATIONSHIPS : "1:N (refers/referee)"
+
+    SESSIONS ||--o{ FEATURE_EVENTS : "1:N (contains)"
+    SESSIONS ||--o{ TASK_ACTIVITY : "1:N (hosts)"
+    SESSIONS ||--o{ MILESTONES : "1:N (triggers)"
+
+    TASKS ||--o{ TASK_ACTIVITY : "1:N (catalog template)"
+
+    TASK_ACTIVITY ||--o| REWARDS_LEDGER : "1:1 (decoupled credit)"
+    REWARDS_LEDGER ||--o| WALLET_TRANSACTIONS : "1:1 (posts credit)"
+    WITHDRAWAL_REQUESTS ||--o{ WALLET_TRANSACTIONS : "1:N (hold/settle/refund)"
+
+    USERS {
+        VARCHAR(11) user_id PK
+        VARCHAR(100) full_name
+        VARCHAR(150) email
+        INTEGER age
+        VARCHAR(20) gender
+        VARCHAR(50) state
+        VARCHAR(50) city
+        TIMESTAMP registration_datetime
+        VARCHAR(50) acquisition_source
+        VARCHAR(50) referral_source_detail
+        VARCHAR(50) primary_device
+        VARCHAR(20) platform
+        VARCHAR(20) account_status
+        VARCHAR(20) email_verification_status
+        VARCHAR(20) onboarding_status
+        TIMESTAMP last_login_datetime
+        INTEGER xp_balance
+        VARCHAR(20) referral_code
+        BOOLEAN is_active_7d
+        BOOLEAN is_active_30d
+    }
+
+    SESSIONS {
+        VARCHAR(11) session_id PK
+        VARCHAR(11) user_id FK
+        TIMESTAMP session_start
+        TIMESTAMP session_end
+        INTEGER session_duration_seconds
+        VARCHAR(50) device
+        VARCHAR(20) platform
+        VARCHAR(50) entry_point
+        VARCHAR(50) exit_feature
+        INTEGER events_in_session
+        INTEGER features_used_count
+    }
+
+    FEATURE_EVENTS {
+        VARCHAR(11) event_id PK
+        VARCHAR(11) user_id FK
+        VARCHAR(11) session_id FK
+        TIMESTAMP event_datetime
+        VARCHAR(50) feature_name
+        VARCHAR(50) event_name
+        VARCHAR(20) event_status
+        VARCHAR(50) device
+        VARCHAR(20) platform
+        INTEGER sequence_number
+        BOOLEAN reward_related_flag
+    }
+
+    TASKS {
+        VARCHAR(20) task_id PK
+        VARCHAR(50) task_category
+        VARCHAR(150) task_title
+        VARCHAR(10) reward_currency_offered
+        DECIMAL reward_amount_offered
+        VARCHAR(100) advertiser_partner_name
+    }
+
+    TASK_ACTIVITY {
+        VARCHAR(15) activity_id PK
+        VARCHAR(11) user_id FK
+        VARCHAR(20) task_id FK
+        VARCHAR(11) session_id FK
+        VARCHAR(50) task_category
+        TIMESTAMP task_viewed_at
+        TIMESTAMP task_started_at
+        TIMESTAMP task_completed_at
+        VARCHAR(20) task_status
+        VARCHAR(100) failure_reason
+        VARCHAR(20) reward_status
+    }
+
+    REWARDS_LEDGER {
+        VARCHAR(24) reward_transaction_id PK
+        VARCHAR(15) activity_id FK
+        VARCHAR(11) user_id FK
+        VARCHAR(50) source_feature
+        VARCHAR(10) currency_type
+        DECIMAL reward_amount
+        VARCHAR(20) reward_lifecycle_status
+        VARCHAR(64) idempotency_hash
+        DECIMAL balance_after
+        TIMESTAMP created_at
+        TIMESTAMP credited_at
+    }
+
+    WALLET_TRANSACTIONS {
+        VARCHAR(24) wallet_transaction_id PK
+        VARCHAR(11) user_id FK
+        VARCHAR(10) currency
+        VARCHAR(30) transaction_type
+        VARCHAR(6) direction
+        DECIMAL amount
+        DECIMAL balance_before
+        DECIMAL balance_after
+        VARCHAR(36) reference_id
+        VARCHAR(64) idempotency_key
+        TIMESTAMP created_at
+    }
+
+    WITHDRAWAL_REQUESTS {
+        VARCHAR(24) withdrawal_id PK
+        VARCHAR(11) user_id FK
+        DECIMAL amount_tokens
+        DECIMAL amount_fiat
+        VARCHAR(3) currency_code
+        VARCHAR(20) payout_method
+        VARCHAR(100) payout_destination_masked
+        VARCHAR(20) withdrawal_status
+        VARCHAR(30) gateway_provider
+        VARCHAR(100) gateway_transaction_ref
+        DECIMAL gateway_fee_amount
+        TIMESTAMP requested_at
+        TIMESTAMP completed_at
+    }
+
+    REFERRAL_RELATIONSHIPS {
+        BIGINT referral_id PK
+        VARCHAR(11) referrer_user_id FK
+        VARCHAR(11) referee_user_id FK
+        VARCHAR(20) referral_code_used
+        VARCHAR(20) conversion_status
+        BOOLEAN is_qualified
+        BOOLEAN referrer_reward_credited
+        TIMESTAMP created_at
+    }
+
+    DAILY_ACTIVITY {
+        VARCHAR(11) user_id PK
+        DATE activity_date PK
+        INTEGER session_count
+        DECIMAL session_duration_minutes
+        INTEGER event_count
+        INTEGER completed_task_count
+        BOOLEAN daily_reward_claimed
+        BOOLEAN active_flag
+    }
+
+    MILESTONES {
+        BIGSERIAL milestone_id PK
+        VARCHAR(11) user_id FK
+        VARCHAR(11) session_id FK
+        VARCHAR(50) milestone_type
+        TIMESTAMP milestone_datetime
+        VARCHAR(50) milestone_value
+    }
